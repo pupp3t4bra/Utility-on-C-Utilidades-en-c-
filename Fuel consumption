@@ -1,0 +1,39 @@
+#include <stdio.h>
+/*En este programa calcularemos el consumo de gasolina de un coche*/
+
+int main (void){
+    float litros,dinero,kilometros,precio,consumo;
+    char repetir;
+
+
+    printf("Bienvenido a la calculadora de consumo\n");
+
+/*Etiqueta de vuelta al principio del programa*/
+    inicio:
+/*Pedimos los datos al usuario*/
+    printf("Escribe el precio de la gasolina:");
+    scanf("%f",&precio);
+    printf("Escribe el numero de kilometros que has hecho:");
+    scanf("%f",&kilometros);
+    printf("Escribe cuanto le pusistes al vehiculo:");
+    scanf("%f",&dinero);
+
+/*Primero hay que saber cuantos litros entran con el dinero que ponemos*/
+    litros = dinero/precio;
+    consumo = (litros/kilometros)*100;
+    printf("Calculando consumo de gasolina...\n");
+    printf ("El consumo del vehiculo es: %f,",consumo);
+
+/*Condicional para reiniciar el programa*/
+    printf("¿Deseas hacer otro calculo? (s/n): ");
+        scanf(" %c", &repetir);
+        if (repetir == 's' || repetir == 'S')
+        {
+            goto inicio;
+        }
+        else
+    return 0;
+
+
+
+}
