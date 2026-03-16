@@ -6,12 +6,12 @@ int main (void){
     char repetir;
 
 
-    printf("Bienvenido a la calculadora de consumo\n");
+    printf("<---Bienvenido a la calculadora de consumo de combustible--->\n");
 
 /*Etiqueta de vuelta al principio del programa*/
     inicio:
 /*Pedimos los datos al usuario*/
-    printf("Escribe el precio de la gasolina:");
+    printf("Escribe el precio de la gasolina, gasoil, adblue:");
     scanf("%f",&precio);
     printf("Escribe el numero de kilometros que has hecho:");
     scanf("%f",&kilometros);
@@ -22,13 +22,14 @@ int main (void){
     litros = dinero/precio;
     consumo = (litros/kilometros)*100;
     printf("Calculando consumo de gasolina...\n");
-    printf ("El consumo del vehiculo es: %f,",consumo);
+    printf ("El consumo del vehiculo es: %f:\n",consumo);
 
 /*Condicional para reiniciar el programa*/
     printf("¿Deseas hacer otro calculo? (s/n): ");
         scanf(" %c", &repetir);
         if (repetir == 's' || repetir == 'S')
         {
+            system ("cls");
             goto inicio;
         }
         else
