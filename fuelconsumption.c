@@ -25,7 +25,7 @@ int main (void){
     printf ("El consumo del vehiculo es: %f,",consumo);
 
 /*Condicional para reiniciar el programa*/
-    printf("¿Deseas hacer otro calculo? (s/n): ");
+    printf("Â¿Deseas hacer otro calculo? (s/n): ");
         scanf(" %c", &repetir);
         if (repetir == 's' || repetir == 'S')
         {
